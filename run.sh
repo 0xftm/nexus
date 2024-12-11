@@ -9,7 +9,7 @@ Description=NEXUS
 After=network-online.target
 [Service]
 WorkingDirectory=/root
-ExecStart=/usr/bin/curl https://cli.nexus.xyz | /usr/bin/sh
+ExecStart=/bin/bash -c 'curl https://cli.nexus.xyz | sh'
 Restart=always
 Environment="PATH=/root/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
 StandardOutput=append:/root/nexus-ln.log
