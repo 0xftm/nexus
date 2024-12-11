@@ -11,6 +11,7 @@ After=network-online.target
 WorkingDirectory=/root
 ExecStart=/usr/bin/curl https://cli.nexus.xyz | /usr/bin/sh
 Restart=always
+Environment="PATH=/root/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
 StandardOutput=append:/root/nexus-ln.log
 StandardError=append:/root/nexus-ln.log
 RestartSec=3
