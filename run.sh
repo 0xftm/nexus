@@ -8,7 +8,7 @@ sudo tee /etc/systemd/system/nexus.service > /dev/null <<EOF
 Description=NEXUS
 After=network-online.target
 [Service]
-WorkingDirectory=/root/
+WorkingDirectory=/root
 ExecStart=/usr/bin/curl https://cli.nexus.xyz | /usr/bin/sh
 Restart=always
 StandardOutput=append:/root/nexus-ln.log
