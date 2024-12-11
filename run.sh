@@ -9,7 +9,7 @@ Description=NEXUS
 After=network-online.target
 [Service]
 User=root
-WorkingDirectory=/root/nexus/
+WorkingDirectory=/root/
 ExecStart=/bin/bash -c 'curl https://cli.nexus.xyz | sh'
 Restart=always
 StandardOutput=append:/root/nexus-ln.log
